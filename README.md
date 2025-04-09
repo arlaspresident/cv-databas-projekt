@@ -1,8 +1,8 @@
-#**CV databas projekt**
+# **CV databas projekt**
 
 Detta är ett projekt för att lagra och visa kurser som jag har läst som en del av mitt CV. Projektet är utvecklat med Node.js, Express, SQLite och EJS.
 
-##**Funktioner**
+## **Funktioner**
 
 Visa alla lagrade kurser
 Lägg till ny kurs via formulär
@@ -17,7 +17,7 @@ View engine: EJS
 Styling: CSS
 Installation
 
-##**Klona detta repository:**
+## **Klona detta repository:**
 git clone (https://github.com/arlaspresident/cv-databas-projekt.git) cd cv-databas-projekt
 Installera nödvändiga paket:
 npm install
@@ -27,7 +27,7 @@ Gå till:
 http://localhost:3000
 
 
-##**Databasinstallation:**
+## **Databasinstallation:**
 
 Projektet använder SQLite som databas.
 
@@ -39,6 +39,6 @@ Skriptet finns även i projektmappen som filen database.sql.
 
 När du kör projektet lokalt behöver du inte köra detta manuellt, eftersom tabellen skapas automatiskt när du startar servern.
 
-##**ER-diagram**
+## **ER-diagram**
 
 Se bilden i projektmappen: diagram.png
