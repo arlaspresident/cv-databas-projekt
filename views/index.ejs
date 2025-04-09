@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Mina kurser</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Mina kurser</h1>
+
+    <nav>
+        <a href="/add">Lägg till ny kurs</a> | 
+        <a href="/about">Om sidan</a>
+    </nav>
+
+    <% if (courses.length === 0) { %>
+        <p>Inga kurser tillagda ännu.</p>
+    <% } else { %>
+        <ul>
+            <% courses.forEach(course => { %>
+                <li>
+                    <strong><%= course.coursecode %> - <%= course.coursename %></strong><br>
+                    Progression: <%= course.progression %><br>
+                    <a href="<%= course.syllabus %>" target="_blank">Kursplan</a><br>
+                    <a href="/delete/<%= course.id %>">Radera</a>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+</body>
+</html>
