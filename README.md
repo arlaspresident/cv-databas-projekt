@@ -4,20 +4,23 @@ Detta är ett projekt för att lagra och visa kurser som jag har läst som en de
 
 ## **Funktioner**
 
-Visa alla lagrade kurser
-Lägg till ny kurs via formulär
-Radera kurs
-Server-side validering av formulär
-Enkel och responsiv design
-Teknisk översikt
+- Visa alla lagrade kurser
+- Lägg till ny kurs via formulär
+- Radera kurs
+- Server-side validering av formulär
+- Enkel och responsiv design
 
-Backend: Node.js och Express
-Databas: SQLite
-View engine: EJS
-Styling: CSS
-Installation
 
-## **Klona detta repository:**
+## **Teknisk översikt**
+
+- Backend: Node.js och Express
+- Databas: SQLite
+- View engine: EJS
+- Styling: CSS
+
+## **Installation**
+
+**Klona detta repository:**
 git clone (https://github.com/arlaspresident/cv-databas-projekt.git) cd cv-databas-projekt
 Installera nödvändiga paket:
 npm install
