@@ -1,3 +1,4 @@
+// importera nödvändiga moduler
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -15,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-//startsida
+//startsida - visa alla kurser från databasen
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM courses';
     db.all(sql, [], (err, rows) => {
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
             console.error(err.message);
             res.send('Fel vid hämtning av kurser');
         } else {
-            res.render('index', { courses: rows });
+            res.render('index', { courses: rows }); // skickar datan till vyn
         }
     });
 });
@@ -54,7 +55,7 @@ app.post('/add', (req, res) => {
             console.error(err.message);
             res.send('Fel vid tillägg av kurs');
         } else {
-            res.redirect('/');
+            res.redirect('/'); //om allt lyckas gå tbx till startsidan
         }
     });
 });
