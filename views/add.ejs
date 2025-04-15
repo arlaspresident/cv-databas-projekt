@@ -13,6 +13,10 @@
         <a href="/about">Om sidan</a>
     </nav>
 
+    <% if (typeof error !== 'undefined') { %>
+        <p class="error"><%= error %></p>
+    <% } %>
+    
     <form action="/add" method="POST">
         <label>Kurskod:
             <input type="text" name="coursecode">

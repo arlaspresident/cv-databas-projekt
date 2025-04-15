@@ -44,7 +44,7 @@ app.post('/add', (req, res) => {
 
     //servervalidering
     if (!coursecode || !coursename || !syllabus || !progression) {
-        return res.send('Alla fält måste fyllas i!');
+        return res.render('add', { error: 'Alla fält måste fyllas i!' });
     }
 
     const sql = 'INSERT INTO courses (coursecode, coursename, syllabus, progression) VALUES (?, ?, ?, ?)';
